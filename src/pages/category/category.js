@@ -38,6 +38,7 @@ new Vue({
     },
     getRank(){
       axios.get(url.rank).then(res => {
+        console.log(res.data.data)
         this.rankData = res.data.data
       })
     },

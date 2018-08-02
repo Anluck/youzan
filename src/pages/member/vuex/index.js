@@ -42,7 +42,7 @@ const store = new Vuex.Store({
   actions: {
     getlists({commit}){
       Address.list().then(res => {
-        commit('init', res.data.list)
+        commit('init', res.data.lists)
       })
     },
     addAction({commit}, instance){

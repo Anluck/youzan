@@ -1,5 +1,5 @@
 let url = {
-  hotList: '/index/hotList',
+  hotList: '/index/hotLists',
   banner: '/index/banner',
   topList: '/category/topList',
   subList: '/category/subList',
@@ -20,7 +20,7 @@ let url = {
   addressSetDefault: '/address/setDefault'
 }
 
-let host = 'http://rapapi.org/mockjsdata/34221'
+let host = 'http://rap2api.taobao.org/app/mock/7058'
 
 for(let key in url){
   if(url.hasOwnProperty(key)){

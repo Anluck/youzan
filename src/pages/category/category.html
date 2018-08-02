@@ -76,7 +76,7 @@
                     <li class="goods-item" v-for="(list,index) in rankData.hotGoods">
                       <a :href="'goods.html?id='+list.id">
                         <div class="thumb badge center-img">
-                          <img :src="list.image">
+                          <img :src="list.img">
                           <span class="num">{{index+1}}</span>
                         </div>
                         <div class="detail">
@@ -104,8 +104,10 @@
                         <span class="follows"> / 关注度: {{list.follows}}</span>
                       </div>
                       <ul class="shop-images">
-                        <li v-for="item in list.images">
-                          <a href="https://h5.youzan.com/v2/showcase/homepage?kdt_id=10695955&amp;source=yzapp"><img :src="item.picUrl"></a>
+                        <li v-for="item in list.imgs">
+                          <a href="https://h5.youzan.com/v2/showcase/homepage?kdt_id=10695955&amp;source=yzapp">
+                            <img :src="item">
+                          </a>
                         </li>
                       </ul>
                     </li>
@@ -117,7 +119,7 @@
                   </div>
                   <ul class="keywords-list">
                     <li v-for="list in rankData.hotKeywords">
-                      <a href="javascript:;" class="js-hot-keyword">{{list.word}}</a>
+                      <a href="javascript:;" class="js-hot-keyword">{{list}}</a>
                     </li>
                   </ul>
                 </div>
@@ -130,7 +132,7 @@
                 v-for="list in subData.brandList"
                 @click="toSearch(list)"
                 >
-                  <img :src="list.image" :alt="list.name" class="category-img">
+                  <img :src="list.img" :alt="list.name" class="category-img">
                   <span class="category-item-name">
                   {{list.name}}            </span>
                 </li>
@@ -141,7 +143,7 @@
                 v-for="list in subData.categoryList"
                 @click="toSearch(list)"
                 >
-                  <img :src="list.image" :alt="list.name" class="category-img">
+                  <img :src="list.img" :alt="list.name" class="category-img">
                   <span class="category-item-name">
                   {{list.name}}            </span>
                 </li>
