@@ -38,12 +38,13 @@ new Vue({
   methods: {
     getDetails(){
       axios.post(url.details, {id}).then(res => {
+        console.log(res.data.data)
         this.details = res.data.data
         this.bannerLists = []
         this.details.imgs.forEach(item => {
           this.bannerLists.push({
             clickUrl: '',
-            image: item
+            img: item
           })
         })
       })
