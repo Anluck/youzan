@@ -20,7 +20,7 @@ let url = {
   addressSetDefault: '/address/setDefault'
 }
 
-let host = 'http://rap2api.taobao.org/app/mock/7058'
+let host = '//rap2api.taobao.org/app/mock/7058'
 
 for(let key in url){
   if(url.hasOwnProperty(key)){
